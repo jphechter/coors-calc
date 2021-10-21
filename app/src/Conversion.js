@@ -28,10 +28,10 @@ function Conversion(props) {
       // 6pk, 16, 18, 30 etc.
     return (
       <div className={"conversion"}>
+        <p>That's {calculationResult} Coors Lights!</p>
         <div className={"rack"}>
           {cans}
         </div>
-        <p>That's {calculationResult} Coors Lights!</p>
       </div>
     );
   }
