@@ -1,10 +1,10 @@
 import './Calculator.css';
 
-import { useState } from "react";
+import React, { useState } from "react";
 
-function Calculator() {
+function Calculator(props) {
 
-  const [input, setInput] = useState('19.4')
+  const [input, setInput] = useState('')
   const [containsDecimal, setCD] = useState(false)
 
   function display(value) {
@@ -16,16 +16,20 @@ function Calculator() {
     }
     setInput(`${input}${value}`);
   }
-
-  function calculate() {
+  
+  function clear() {
     setInput('');
     setCD(false);
   }
 
+  function calculate() {
+    clear();
+    props.input(input);
+  }
 
     return (
       <div className="calculator">
-        <div onClick={() => setInput('')} className="display">
+        <div onClick={() => clear()} className="display">
           <span>{input}</span>
         </div>
         <div className="buttons">

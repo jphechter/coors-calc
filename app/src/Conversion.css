@@ -1,0 +1,21 @@
+.conversion {
+  height: 200px;
+}
+
+.rack {
+  align-items: flex-end;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  height: 100px;
+  justify-content: center;
+}
+
+.can {
+  background-image: url('./images/can.png');
+  background-position: bottom;
+  background-size: auto 100px;
+  background-repeat: no-repeat;
+  width: 48px;
+  height: 100px;
+}
