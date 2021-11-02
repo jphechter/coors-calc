@@ -5,13 +5,20 @@ import Conversion from './Conversion';
 
 function App() {
 
-  const [userInput, setInput] = useState('');
+  const [abv, setABV] = useState('');
+  const [multiplier, setMultValue] = useState(1)
 
   return (
     <div className="App">
       <h1>THE COORS CALC<sup>®</sup></h1>
-      <Conversion value={userInput}/>
-      <Calculator input={(userInput) => setInput(userInput)}/>
+      <Conversion
+        abv={abv}
+        multiplier={multiplier}
+      />
+      <Calculator
+        abv={(abv) => setABV(abv)}
+        multiplier={(mult) => setMultValue(mult)}
+      />
     </div>
   );
 }

@@ -4,8 +4,9 @@
   color: #e8eaed;
   cursor: pointer;
   margin: 4px;
+  padding: 0 2px;
   text-align: right;
-  width: calc(100% - 8px);
+  width: calc(100% - 12px);
 }
 
 .display span {
@@ -14,7 +15,24 @@
   padding: 10px;
 }
 
-.display:hover{
+.multiplier {
+  background-color: #202124;
+  border: none;
+  border-radius: 2px;
+  cursor: pointer;
+  float: left;
+  height: 44px;
+  font-size: 16px;
+  font-weight: 400;
+  letter-spacing: 2px;
+  margin-left: -2px;
+  padding-left: 2px;
+}
+.multiplier:focus-visible {
+  outline: none;
+}
+
+.display:hover, .multiplier:hover{
   background: #424548;
   border-color: #424548;
 }

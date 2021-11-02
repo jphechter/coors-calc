@@ -5,47 +5,51 @@ import Display from './Display';
 
 function Calculator(props) {
 
-  const [input, setInput] = useState('')
+  const [abv, setABV] = useState('')
   const [containsDecimal, setCD] = useState(false)
 
   function display(value) {
     if(value === ".") {
       setCD(true);
-      if(input === "") {
+      if(abv === "") {
         value = "0.";
       }
     }
-    setInput(`${input}${value}`);
+    setABV(`${abv}${value}`);
   }
   
   function clear() {
-    setInput('');
+    setABV('');
     setCD(false);
   }
 
   function calculate() {
     clear();
-    props.input(input);
+    props.abv(abv);
   }
 
     return (
       <div className="calculator">
-        <Display input={input} clear={() => clear()}></Display>
+        <Display
+          abv={abv}
+          clear={() => clear()}
+          multiplier={(value) => props.multiplier(value)}
+        />
         <div className="buttons">
           <div className="button-row">
-            <button onClick={() => display('9')}>9</button>
-            <button onClick={() => display('8')}>8</button>
             <button onClick={() => display('7')}>7</button>
+            <button onClick={() => display('8')}>8</button>
+            <button onClick={() => display('9')}>9</button>
           </div>
           <div className="button-row">
-            <button onClick={() => display('6')}>6</button>
-            <button onClick={() => display('5')}>5</button>
             <button onClick={() => display('4')}>4</button>
+            <button onClick={() => display('5')}>5</button>
+            <button onClick={() => display('6')}>6</button>
           </div>
           <div className="button-row">
-            <button onClick={() => display('3')}>3</button>
-            <button onClick={() => display('2')}>2</button>
             <button onClick={() => display('1')}>1</button>
+            <button onClick={() => display('2')}>2</button>
+            <button onClick={() => display('3')}>3</button>
           </div>
           <div className="button-row">
             <button onClick={() => display('0')}>0</button>
