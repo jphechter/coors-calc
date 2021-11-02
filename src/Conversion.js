@@ -28,7 +28,6 @@ function Conversion(props) {
       // 6pk, 16, 18, 30 etc.
     return (
       <div className={"conversion"}>
-        <p>{props.multiplier} 12oz drinks at {props.abv} %ABV</p>
         <p>That's {calculationResult} Coors Lights!</p>
         <div className={"rack"}>
           {cans}

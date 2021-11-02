@@ -11,9 +11,9 @@ p {
     padding: 10px;
 }
 
-.buttons button{
+.buttons button, .accessory-button{
     background-color: #3c4043;
-    border: 1px solid #3c4043;
+    border: none;
     border-radius: 4px;
     color: #e8eaed;
     cursor: pointer;
@@ -26,7 +26,6 @@ p {
 
 .buttons button:hover{
     background: #424548;
-    border-color: #424548;
 }
 
 .buttons button.equal{
@@ -36,4 +35,44 @@ p {
 .buttons button.equal:hover{
     background: #aecbfa;
     border-color: #aecbfa;
+}
+
+div.accessory-button {
+    display: inline-block;
+    width: 57px;
+}
+
+.accessory-button, button.accessory-button, .multiplier {
+    background-color: #5f6368;
+    font-size: 16px;
+}
+
+.accessory-button:hover,
+.accessory-button:hover .multiplier,
+button.accessory-button:hover {
+    background-color: #70757a;
+}
+
+.multiplier {
+    border: none;
+    margin: 0;
+    -webkit-appearance: menulist-button;
+    height: 21px;
+}
+
+
+select:focus, .multiplier:focus, .multiplier:focus-visible {
+    outline: none;
+    outline-style: none;
+    outline-color: none;
+}
+
+
+/* Remove with addition of fl oz */
+.accessory-button.inactive {
+    background-color: #202124;
+    cursor: initial;
+}
+.accessory-button.inactive:hover {
+    background-color: initial;
 }
