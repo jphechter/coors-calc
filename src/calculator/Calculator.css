@@ -1,0 +1,78 @@
+p {
+    text-shadow: 0px 0px 4px rgb(32, 33, 36);
+}
+
+.calculator {
+    background-color: #202124;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px 4px rgba(32, 33, 36, 0.4);
+    display: inline-block;
+    margin: 0 auto;
+    padding: 10px;
+}
+
+.buttons button, .accessory-button{
+    background-color: #3c4043;
+    border: none;
+    border-radius: 4px;
+    color: #e8eaed;
+    cursor: pointer;
+    font-family: "Montserrat";
+    font-size: 22px;
+    padding: 14px;
+    margin: 4px;
+    width: 85px;
+}
+
+.buttons button:hover{
+    background: #424548;
+}
+
+.buttons button.equal{
+    background-color: #8ab4f8;   
+}
+
+.buttons button.equal:hover{
+    background: #aecbfa;
+    border-color: #aecbfa;
+}
+
+div.accessory-button {
+    display: inline-block;
+    width: 57px;
+}
+
+.accessory-button, button.accessory-button, .multiplier {
+    background-color: #5f6368;
+    font-size: 16px;
+}
+
+.accessory-button:hover,
+.accessory-button:hover .multiplier,
+button.accessory-button:hover {
+    background-color: #70757a;
+}
+
+.multiplier {
+    border: none;
+    margin: 0;
+    -webkit-appearance: menulist-button;
+    height: 21px;
+}
+
+
+select:focus, .multiplier:focus, .multiplier:focus-visible {
+    outline: none;
+    outline-style: none;
+    outline-color: none;
+}
+
+
+/* Remove with addition of fl oz */
+.accessory-button.inactive {
+    background-color: #202124;
+    cursor: initial;
+}
+.accessory-button.inactive:hover {
+    background-color: initial;
+}

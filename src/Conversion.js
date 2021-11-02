@@ -4,8 +4,8 @@ import React from 'react';
 
 function Conversion(props) {
 
-  if (props.value) {
-    const calculationResult = (parseFloat(props.value)/4.2).toFixed(2);
+  if (props.abv) {
+    const calculationResult = (parseFloat(props.abv)/4.2 * props.multiplier).toFixed(2);
     const canNumber = Math.round(parseFloat(calculationResult) + .49)
     const decimal = calculationResult.split(".")[1]
     const partial = decimal !== "00" ? decimal : "100";
