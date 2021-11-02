@@ -1,0 +1,20 @@
+.display {
+  border: #3c4043 1px solid;
+  border-radius: 2px;
+  color: #e8eaed;
+  cursor: pointer;
+  margin: 4px;
+  text-align: right;
+  width: calc(100% - 8px);
+}
+
+.display span {
+  line-height: 44px;
+  font-size: 22px;
+  padding: 10px;
+}
+
+.display:hover{
+  background: #424548;
+  border-color: #424548;
+}

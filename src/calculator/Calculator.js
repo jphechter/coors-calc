@@ -1,6 +1,7 @@
 import './Calculator.css';
 
-import React, { useState } from "react";
+import { useState } from "react";
+import Display from './Display';
 
 function Calculator(props) {
 
@@ -29,9 +30,7 @@ function Calculator(props) {
 
     return (
       <div className="calculator">
-        <div onClick={() => clear()} className="display">
-          <span>{input}</span>
-        </div>
+        <Display input={input} clear={() => clear()}></Display>
         <div className="buttons">
           <div className="button-row">
             <button onClick={() => display('9')}>9</button>
